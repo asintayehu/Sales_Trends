@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+import math
 
 df = pd.read_excel('sales_data')
 
@@ -8,12 +10,9 @@ df = pd.read_excel('sales_data')
 
 first_class_consumer = []
 
-first_class = {"Consumer":first_class_consumer}
+first_class = {"Consumer" : first_class_consumer, }
 
 for element in df['First Class']:
     if str(element) != "nan" and str(element) != 'Consumer':
-        first_class['Consumer'].append(element)
+        first_class['Consumer'].append(round(element, 2))
 
-for item in 
-
-print(first_class)
